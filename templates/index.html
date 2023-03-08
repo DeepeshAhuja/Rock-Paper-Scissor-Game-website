@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <div class="head">
+    <h1>Choose Rock, Paper, Scissors</h1>
+    </div>
+    <div class="middle">
+    <form action="{{url_for('input')}}" method="post">
+        {% if T_score is defined and T_score %}
+                    <div class="alert alert-warning">
+                        {{T_score}}
+                    </div>
+                    {% endif %}
+        {% if you_chose is defined and you_chose %}
+                    <div class="alert alert-warning">
+                        {{you_chose}}
+                    </div>
+                    {% endif %}            
+        {% if computer_chose is defined and computer_chose %}
+                    <div class="alert alert-warning">
+                        {{computer_chose}}
+                    </div>
+                    {% endif %}
+        {% if message is defined and message %}
+                    <div class="alert alert-warning">
+                        {{message}}
+                    </div>
+                    {% endif %}
+                    <label>
+                        <input type="radio" name="choice" value="rock" checked>
+                        <img src="../static/img/rock.jpg" alt="rock">
+                      </label>
+                      
+                      <label>
+                        <input type="radio" name="choice" value="paper">
+                        <img src="../static/img/paper.jpg" alt="paper">
+                      </label>
+
+                      <label>
+                        <input type="radio" name="choice" value="scissors">
+                        <img src="../static/img/scissors.jpg" alt="scissors">
+                      </label>
+                    </div>
+                      <br> 
+                      <div class="foot">
+        <input type="submit" value="Play">
+</div>
+        <!-- <input type="button" name="quit" value="quit"> -->
+    </form>
+</body>
+</html>
