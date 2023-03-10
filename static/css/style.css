@@ -1,0 +1,60 @@
+/* HIDE RADIO */
+[type=radio] { 
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* IMAGE STYLES */
+[type=radio] + img {
+cursor: pointer;
+}
+
+/* CHECKED STYLES */
+[type=radio]:checked + img {
+outline: 5px solid #400E32;
+}
+
+/* HOVER STYLES */
+[type=radio] + img:hover {
+outline: 5px solid #400E32;
+}
+
+img{
+    width: 400px;
+    height: 400px;
+    margin-right: 30px;
+    margin-left: 50px;
+    /* text-align: center; */
+}
+
+h1{
+    color: brown;
+}
+
+.head{
+    background-color: #F2CD5C;
+}
+
+.middle{
+    background-color: #F2921D;
+    text-align: center;
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+/* .foot{
+    background-color: #A61F69;
+    text-align: center;
+    align-: center;
+    height: 100px;
+} */
+
+.foot {
+    height: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background:  #A61F69;
+  }
