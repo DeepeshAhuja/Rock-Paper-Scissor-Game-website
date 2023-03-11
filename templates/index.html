@@ -6,46 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock, Paper, Scissors</title>
     <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBNEHxXf45HxzY7xL2xMg94ZUtGVeHjyjTYw&usqp=CAU" type="image/x-icon">
 </head>
 <body>
     <div class="head">
-    <h1>Choose Rock, Paper, Scissors</h1>
+    <marquee behavior="" direction="right" scrollamount="10" ><h1> Choose Rock, Paper, Scissors</h1></marquee> 
     </div>
     <div class="middle">
     <form action="{{url_for('input')}}" method="post">
-        {% if T_score is defined and T_score %}
-                    <div class="alert alert-warning">
+        <!-- {% if T_score is defined and T_score %}
+                    <div class="alert">
                         {{T_score}}
                     </div>
-                    {% endif %}
+                    {% endif %} -->
         {% if you_chose is defined and you_chose %}
-                    <div class="alert alert-warning">
-                        {{you_chose}}
+                    <div class="alert">
+                        <h3>{{you_chose}}</h3>
                     </div>
                     {% endif %}            
         {% if computer_chose is defined and computer_chose %}
-                    <div class="alert alert-warning">
-                        {{computer_chose}}
+                    <div class="alert">
+                        <h3>{{computer_chose}}</h3>
                     </div>
                     {% endif %}
         {% if message is defined and message %}
-                    <div class="alert alert-warning">
-                        {{message}}
+                    <div class="alert">
+                        <h3>{{message}}</h3>
                     </div>
                     {% endif %}
                     <label>
                         <input type="radio" name="choice" value="rock" checked>
-                        <img src="../static/img/rock.jpg" alt="rock">
+                        <img src="https://media.tenor.com/vv8NA4qqfrUAAAAd/rock-dance-stone.gif" alt="rock">
                       </label>
                       
                       <label>
                         <input type="radio" name="choice" value="paper">
-                        <img src="../static/img/paper.jpg" alt="paper">
+                        <img src="https://media.tenor.com/jHsiqrp5To8AAAAM/paper-plane.gif" alt="paper">
                       </label>
 
                       <label>
                         <input type="radio" name="choice" value="scissors">
-                        <img src="../static/img/scissors.jpg" alt="scissors">
+                        <img src="https://media1.giphy.com/media/5xtDaruJgRm1QdFTvnW/giphy.gif" alt="scissors">
                       </label>
                     </div>
                       <br> 
